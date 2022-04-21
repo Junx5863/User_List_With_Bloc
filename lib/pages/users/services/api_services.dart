@@ -12,14 +12,14 @@ class ApiServiceUser {
   var dio = Dio();
 
   // Get Info User List
-  Future<ResultInfoUser?> getUsersList() async {
+  Future<ResultInfoUser?> getUsersList(int countPage) async {
     ResultInfoUser resultadoValidacion = ResultInfoUser();
     try {
       GetUserList getUsersList;
       var response;
       try {
         response =
-            await http.get(Uri.parse('https://reqres.in/api/users?page=1'));
+            await http.get(Uri.parse('https://reqres.in/api/users?page=$countPage'));
       } on DioError catch (e) {
         print(e);
         return resultadoValidacion;

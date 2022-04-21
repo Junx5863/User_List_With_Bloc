@@ -43,6 +43,11 @@ class _MenuBarState extends State<MenuBar> {
             title: Text('Register Person'),
             onTap: () {},
           ),
+          ListTile(
+            leading: Icon(Icons.save_rounded),
+            title: Text('Save Info'),
+            onTap: () {},
+          ),
           Divider(),
           ListTile(
             leading: Icon(Icons.settings),
